@@ -5,12 +5,11 @@ export default function Bai6() {
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
-      setLastKey(e.key); // lưu phím vừa nhấn
+      setLastKey(e.key); 
     };
 
     window.addEventListener("keydown", handleKeyDown);
 
-    // cleanup khi component unmount
     return () => {
       window.removeEventListener("keydown", handleKeyDown);
     };
